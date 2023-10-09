@@ -12,6 +12,9 @@
 
   border: 2px solid var(--light-text);
   border-radius: 18px;
+  box-shadow: 0px 5px 5px 0px var(--light-text);
+  -webkit-box-shadow: 0px 5px 5px 0px var(--light-text);
+  -moz-box-shadow: 0px 5px 5px 0px var(--light-text);
 }
 
 .form-group .form-icon {
