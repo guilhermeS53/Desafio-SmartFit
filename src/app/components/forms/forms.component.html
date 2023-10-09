@@ -19,12 +19,14 @@
   <div class="radio-wrapper">
     <input type="radio" name="hour" value="night" formControlName="hour" />
     <label for="night">Noite</label>
-    <span>18:01 às 22:00</span>
+    <span>18:01 às 23:00</span>
   </div>
 
   <div class="checkbox-wrapper">
-    <input type="checkbox" name="showClosed" formControlName="showClosed" />
-    <label for="showClosed">Exibir unidades fechadas</label>
+    <div class="checkbox">
+      <input type="checkbox" name="showClosed" formControlName="showClosed" />
+      <label for="showClosed">Exibir unidades fechadas</label>
+    </div>
     <span>Resultados encontrados: {{ results.length }}</span>
   </div>
 
