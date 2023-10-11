@@ -48,7 +48,7 @@ export class FilterUnitsService {
       let schedule_weekday = unit.schedules[i].weekdays;
 
       if (todays_weekday === schedule_weekday) {
-        if (schedule_hour !== 'Fechado') {
+        if (schedule_hour !== 'Fechada') {
           let [unit_open_hour, unit_close_hour] = schedule_hour.split(' às ');
           let unit_open_hour_int = parseInt(
             unit_open_hour.replace('h', ''),

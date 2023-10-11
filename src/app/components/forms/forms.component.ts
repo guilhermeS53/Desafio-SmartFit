@@ -9,7 +9,9 @@ import { Location } from 'src/app/types/location.interface';
   templateUrl: './forms.component.html',
   styleUrls: ['./forms.component.scss'],
 })
-export class FormsComponent {
+
+export class FormsComponent implements OnInit {
+  @Output() submitEvent = new EventEmitter();
   results: Location[] = [];
   filteredResults: Location[] = [];
   formGroup!: FormGroup;
@@ -25,9 +27,10 @@ export class FormsComponent {
       hour: '',
       showClosed: true,
     });
-    this.unitService.getAllUnits().subscribe((data) => {
-      this.results = data.locations;
-      this.filteredResults = data.locations;
+
+    this.unitService.getAllUnits().subscribe(data => {
+      this.results = data;
+      this.filteredResults = data;
     });
   }
 
@@ -38,6 +41,8 @@ export class FormsComponent {
       showClosed,
       hour
     );
+
+    this.submitEvent.emit();
   }
 
   onClean(): void {
