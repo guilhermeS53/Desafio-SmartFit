@@ -11,11 +11,8 @@ export class GetUnitsService {
   readonly apiUrl =
     'https://test-frontend-developer.s3.amazonaws.com/data/locations.json';
 
-  private allUnitsSubject: BehaviorSubject<Location[]> = new BehaviorSubject<
-    Location[]
-  >([]);
-  private allUnits$: Observable<Location[]> =
-    this.allUnitsSubject.asObservable();
+  private allUnitsSubject: BehaviorSubject<Location[]> = new BehaviorSubject<Location[]>([]);
+  private allUnits$: Observable<Location[]> = this.allUnitsSubject.asObservable();
   private filteredUnits: Location[] = [];
 
   constructor(private httpClient: HttpClient) {
