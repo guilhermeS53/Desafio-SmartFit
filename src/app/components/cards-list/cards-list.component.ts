@@ -9,6 +9,7 @@ import { Location } from 'src/app/types/location.interface';
 })
 export class CardsListComponent implements OnInit {
   @Input() unitsList: Location[] = [];
+cards: any;
   
   constructor() {}
 
