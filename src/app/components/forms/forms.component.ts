@@ -41,6 +41,7 @@ export class FormsComponent implements OnInit {
       showClosed,
       hour
     );
+    this.unitService.setFilteredUnits(this.filteredResults);
 
     this.submitEvent.emit();
   }
